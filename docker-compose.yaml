@@ -1,0 +1,36 @@
+version: "3.5"
+
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: dev
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - ff4jpostgresdemo
+
+  ff4j:
+    image: lucasnscr/ff4j-security:1.0.0
+    ports:
+      - "8081:8081"
+    environment:
+      POSTGRES_URL: jdbc:postgresql://postgres:5432/dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+        - ff4jpostgresdemo
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - ff4jpostgresdemo
+# I want to access ny cluster from host
+networks:
+  ff4jpostgresdemo:
+    driver: bridge
