@@ -1,7 +1,9 @@
 # ff4j-Security-Jdbc
 
-### **Project description**
-🚀 This project implementing Feature Flags Platform with SpringBoot, Spring Security, Postgres and FF4J. 
+This project implementing Feature Flags Platform with SpringBoot, Spring Security, Postgres and FF4J. 
+
+
+![FF4J Architecture](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vqc1ing1p0grrt7ryarx.png)
 
 [Here is the complete code of the project](https://github.com/lucasnscr/ff4j-Security-Jdbc)
 
@@ -30,10 +32,28 @@ A Feature represents a business logic that can potentially crosses every layer o
 ### **FF4J Use Cases**
 
 - **Feature Toggle:** Enable and disable features at runtime no deployments. In your code implement multiple paths protected by dynamic predicates.
+
+
+![Feature Toggle](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xdrpo0ehurvdmcsrlh4s.png)
+
 - **Role-based Toggling** Enable features not only with flag values but also drive access with roles and groups (Canary Release). Different frameworks supported starting by Spring Security.
+
+![Role-based Toggling](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9t37el5nsiepx7au4u41.png)
+
 - **Features Monitoring:** For each features execution, ff4j evaluates the predicate therefore it's possible to collect and record events, metrics to compute nice dashboards or draw curves for features usage over time.
+
+
+![Features Monitoring](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uul5i2l00g7afk6r2red.png)
+
 - **Web Console:** Administrate FF4j (including features and properties) with the web UI. Packaged as a servlet in the library you will expose it in your backend applications. Almost 10 languages available.
+
+
+![Web Console](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gszxhvbofvqb8kkoq3ts.png)
+
 - **Audit Trail:** Each action (create, update, delete, toggles) can be traced and saved in the audit trail for troubleshooting. With permissions management (AuthorizationManager) it's possible to identify users.
+
+
+![Audit Trail](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbsi3dgbdti4irls70rl.png)
 
 ### **About Project**
 
